@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATHLETES-গন্তব্য হোক গণিত</title>
+    <style>
+        
+        /* Navbar styles */
+        .navbar {
+            background-color: rgb(96, 0, 19);
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            color: rgb(167, 167, 167);
+        }
+
+        /* Container styles */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .content {
+            background-color: #430101;
+            padding: 20px;
+            text-align: center;
+            margin: 50px;
+        }
+
+        .image-container {
+            flex: 1;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+        }
+
+        /* Button styles */
+        .button {
+            background-color: rgb(117, 1, 1);
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Hidden details */
+        .details {
+            display: none;
+            color: white;
+            
+        }
+        
+        .center-text {
+            text-align: center;
+            color: rgb(255, 255, 255);
+            padding-left: 4px;
+            font-weight: bold;
+        }
+        
+        .course-container{
+            display:flex;
+            flex-direction: row;
+            flex-wrap:no-wrap;
+             }
+
+        .course {
+            flex: 1;
+            margin: 10px;
+            border: 1px solid #aaa4a4;
+            padding: 10px;
+            background: #500000;
+            text-align: center;
+        }
+
+        .course h2 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .course p {
+            font-size: 14px;
+        }
+        /* Show dialog when the button is clicked */
+        .show-dialog {
+            display: block;
+        }
+    </style>
+</head>
+    <body>
+    
+        <div class="navbar">
+            <img src="/songe/images/rsz_1rsz_1logo.jpg" alt="">
+            <div class="center-text">
+                <span class="padding"> MATHLETES</span>
+                <br>
+                <span>গন্তব্য হোক গণিত</span>
+            </div>
+        </div>
+        
+        <button class="button" onclick="toggleDialog('COURSES-details')">COURSES</button>
+        <button class="button" onclick="toggleDialog('BATCH TIME-details')">BATCH TIME</button>
+        <button class="button" onclick="toggleDialog('edu-details')">Education for All</button>
+        <button class="button" onclick="toggleDialog('about-details')">About Us</button>
+    
+        <dialog id="COURSES-details" class="modal">
+            <form method="dialog" class="modal-box">
+                <li>Discuss the scope of var, let, and const</li>
+                <p>ANS: var declarations are globally scoped or function scoped while let and const are block scoped. var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.</p>
+                <div class="modal-action">
+                    <button class="btn" onclick="closeDialog('COURSES-details')">Close</button>
+                </div>
+            </form>
+        </dialog>
+    
+        <dialog id="BATCH TIME-details" class="modal">
+            <form method="dialog" class="modal-box">
+                <li>Tell us the use cases of null and undefined</li>
+                <p>ANS: Undefined means the variable has been declared, but its value has not been assigned. Null means an empty value or a blank value. The typeof() operator returns undefined for an undefined variable. The typeof() operator returns the type as an object for a variable whose value is assigned as null.</p>
+                <div class="modal-action">
+                    <button class="btn" onclick="closeDialog('BATCH TIME-details')">Close</button>
+                </div>
+            </form>
+        </dialog>
+    
+        <dialog id="edu-details" class="modal">
+            <form method="dialog" class="modal-box">
+                <li>What do you mean by REST API?</li>
+                <p>ANS: A REST API is an API that conforms to the design principles of the REST, or representational state transfer architectural style. For this reason, REST APIs are sometimes referred to RESTful APIs.</p>
+                <div class="modal-action">
+                    <button class="btn" onclick="closeDialog('edu-details')">Close</button>
+                </div>
+            </form>
+        </dialog>
+    
+        <dialog id="about-details" class="modal">
+            <form method="dialog" class="modal-box">
+                <p>Our Mission</p>
+                <p>Our Team</p>
+                <p>Contact Us</p>
+                <div class="modal-action">
+                    <button class="btn" onclick="closeDialog('about-details')">Close</button>
+                </div>
+            </form>
+        </dialog>
+    
+    
+        <div class="container">
+            <div class="content image-container">
+                <img src="/songe/images/385885835_10229289838144819_1684553120174490997_n.jpg" alt="Math Courses Image">
+            </div>
+            <div class="content">
+                <h1>Welcome to Math Courses</h1>
+                <p>Your introductory text goes here.</p>
+                <p>More information in normal text size.</p>
+            </div>
+        </div>
+        <div class="course-container">
+                        <!-- Course 1 -->
+                        <div class="course">
+                            <h2>CHAPTER 1: MATRIX </h2>
+                            <p>Learn the fundamentals of algebra.</p>
+                            <img src="algebra-image.jpg" alt="Algebra">
+                            <button class="button" onclick="openRandomWebsite()">Learn More</button>
+                        </div>
+                
+                        <!-- Course 2 -->
+                        <div class="course">
+                            <h2>CHAPTER 2: Geometry</h2>
+                            <p>Explore the world of geometric shapes and theorems.</p>
+                            <img src="geometry-image.jpg" alt="Geometry">
+                            <button class="button" onclick="openRandomWebsite()">Learn More</button>
+                        </div>
+                
+                        <!-- Course 3 -->
+                        <div class="course">
+                            <h2>CHAPTER 3: Calculus</h2>
+                            <p>Dive into the realm of calculus and derivatives.</p>
+                            <img src="calculus-image.jpg" alt="Calculus">
+                            <button class="button" onclick="openRandomWebsite()">Learn More</button>
+                        </div>
+                         <!-- Course 4 -->
+                         <div class="course">
+                            <h2>CHAPTER 4: Calculus</h2>
+                            <p>Dive into the realm of calculus and derivatives.</p>
+                            <img src="calculus-image.jpg" alt="Calculus">
+                            <button class="button" onclick="openRandomWebsite()">Learn More</button>
+                        </div>
+                    </div>
+                        <!-- Course 5 -->
+                        <div class="course">
+                            <h2>Course 3: Calculus</h2>
+                            <p>Dive into the realm of calculus and derivatives.</p>
+                            <img src="calculus-image.jpg" alt="Calculus">
+                            <button class="button" onclick="openRandomWebsite()">Learn More</button>
+                        </div>
+                    </div>
+                        <!-- Course 6 -->
+                        <div class="course">
+                            <h2>Course 3: Calculus</h2>
+                            <p>Dive into the realm of calculus and derivatives.</p>
+                            <img src="calculus-image.jpg" alt="Calculus">
+                            <button class="button" onclick="openRandomWebsite()">Learn More</button>
+                        </div>
+                    </div>
+                        <!-- Course 7 -->
+                        <div class="course">
+                            <h2>Course 3: Calculus</h2>
+                            <p>Dive into the realm of calculus and derivatives.</p>
+                            <img src="calculus-image.jpg" alt="Calculus">
+                            <button class="button" onclick="openRandomWebsite()">Learn More</button>
+                        </div>
+                    </div>
+                        <!-- Course 8 -->
+                        <div class="course">
+                            <h2>Course 3: Calculus</h2>
+                            <p>Dive into the realm of calculus and derivatives.</p>
+                            <img src="calculus-image.jpg" alt="Calculus">
+                            <button class="button" onclick="openRandomWebsite()">Learn More</button>
+                        </div>
+                    </div>
+                        <!-- Course 9 -->
+                        <div class="course">
+                            <h2>Course 3: Calculus</h2>
+                            <p>Dive into the realm of calculus and derivatives.</p>
+                            <img src="calculus-image.jpg" alt="Calculus">
+                            <button class="button" onclick="openRandomWebsite()">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+<script>
+    function openRandomWebsite() {
+        const websites = [
+            'https://example.com/1',
+            'https://example.com/2',
+            'https://example.com/3'
+        ];
+        const randomIndex = Math.floor(Math.random() * websites.length);
+        window.open(websites[randomIndex], '_blank');
+    }
+</script>
+
+<script>
+   function toggleDetails(section) {
+        const details = document.getElementById(${section}-details);
+        details.style.display = details.style.display === 'none' ? 'block' : 'none';
+    }
+    function toggleDialog(dialogId) {
+            const dialog = document.getElementById(dialogId);
+            dialog.showModal();
+        }
+
+        function closeDialog(dialogId) {
+            const dialog = document.getElementById(dialogId);
+            dialog.close();
+        }
+</script>
+</body>
+</html>
+ 
