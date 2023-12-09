@@ -6,14 +6,32 @@
     <title>MATHLETES-গন্তব্য হোক গণিত</title>
     <style>
         
-        /* Navbar styles */
-        .navbar {
-            background-color: rgb(96, 0, 19);
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            color: rgb(167, 167, 167);
-        }
+ /* Navbar styles */
+.navbar {
+    background-color: rgb(96, 0, 19);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: rgb(167, 167, 167);
+    justify-content: space-between; /* Add this to space elements apart */
+}
+
+/* Button styles */
+.button {
+    background-color: rgb(117, 1, 1);
+    color: rgb(255, 255, 255); /* Change text color to white */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px; /* Add margin to separate buttons */
+}
+
+.button:hover {
+    background-color: #ff0000; /* Change button color on hover */
+}
+
+
+
 
         /* Container styles */
         .container {
@@ -25,7 +43,7 @@
         }
 
         .content {
-            background-color: #430101;
+            background-color: #690000;
             padding: 20px;
             text-align: center;
             margin: 50px;
@@ -42,7 +60,7 @@
 
         /* Button styles */
         .button {
-            background-color: rgb(117, 1, 1);
+            background-color: rgb(255, 255, 255);
             color: rgb(0, 0, 0);
             padding: 10px 20px;
             border: none;
@@ -74,7 +92,7 @@
             margin: 10px;
             border: 1px solid #aaa4a4;
             padding: 10px;
-            background: #500000;
+            background: rgb(80, 1, 1);
             text-align: center;
         }
 
@@ -95,23 +113,24 @@
     <body>
     
         <div class="navbar">
-            <img src="/songe/images/rsz_1rsz_1logo.jpg" alt="">
+            <img src="/image/photo_2023-10-24_21-10-56.jpg" alt="">
             <div class="center-text">
-                <span class="padding"> MATHLETES</span>
+                <span class="padding">MATHLETES</span>
                 <br>
                 <span>গন্তব্য হোক গণিত</span>
             </div>
+            <button class="button" onclick="toggleDialog('COURSES-details')">COURSES</button>
+            <button class="button" onclick="toggleDialog('BATCH TIME-details')">BATCH TIME</button>
+            <button class="button" onclick="toggleDialog('edu-details')">Education for All</button>
+            <button class="button" onclick="toggleDialog('about-details')">About Us</button>
         </div>
         
-        <button class="button" onclick="toggleDialog('COURSES-details')">COURSES</button>
-        <button class="button" onclick="toggleDialog('BATCH TIME-details')">BATCH TIME</button>
-        <button class="button" onclick="toggleDialog('edu-details')">Education for All</button>
-        <button class="button" onclick="toggleDialog('about-details')">About Us</button>
-    
+        
         <dialog id="COURSES-details" class="modal">
             <form method="dialog" class="modal-box">
-                <li>Discuss the scope of var, let, and const</li>
-                <p>ANS: var declarations are globally scoped or function scoped while let and const are block scoped. var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.</p>
+                <p>HSC Math 1st Paper</p>
+                <p>HSC Math 2nd Paper</p>
+                <p>Admission</p>
                 <div class="modal-action">
                     <button class="btn" onclick="closeDialog('COURSES-details')">Close</button>
                 </div>
@@ -120,8 +139,12 @@
     
         <dialog id="BATCH TIME-details" class="modal">
             <form method="dialog" class="modal-box">
-                <li>Tell us the use cases of null and undefined</li>
-                <p>ANS: Undefined means the variable has been declared, but its value has not been assigned. Null means an empty value or a blank value. The typeof() operator returns undefined for an undefined variable. The typeof() operator returns the type as an object for a variable whose value is assigned as null.</p>
+                <p>Saturday/Monday/Wednesday:0400-0500pm</p>
+                <p>Saturday/Monday/Wednesday:0500pm-0600pm</p>
+                <p>Saturday/Monday/Wednesday:0600pm-0700pm</p>
+                <p>Sunday/Tuesday/Thursday:0400pm-0500pm</p>
+                <p>Sunday/Tuesday/Thursday:0500pm-0600pm</p>
+                <p>Sunday/Tuesday/Thursday:0600pm-0700pm</p>
                 <div class="modal-action">
                     <button class="btn" onclick="closeDialog('BATCH TIME-details')">Close</button>
                 </div>
@@ -130,9 +153,8 @@
     
         <dialog id="edu-details" class="modal">
             <form method="dialog" class="modal-box">
-                <li>What do you mean by REST API?</li>
-                <p>ANS: A REST API is an API that conforms to the design principles of the REST, or representational state transfer architectural style. For this reason, REST APIs are sometimes referred to RESTful APIs.</p>
-                <div class="modal-action">
+                    <a href="https://youtube.com/playlist?list=PLcwjbKY5MK-SCzc6y3aSnStfg14duIkeZ&si=SXiwgHiA7830Jlk6">Free Playlist</a>
+                    <p>Scholarships</p>
                     <button class="btn" onclick="closeDialog('edu-details')">Close</button>
                 </div>
             </form>
@@ -152,43 +174,43 @@
     
         <div class="container">
             <div class="content image-container">
-                <img src="/songe/images/385885835_10229289838144819_1684553120174490997_n.jpg" alt="Math Courses Image">
+                <img src="/image/photo_2023-10-24_21-13-19.jpg" alt="Math Courses Image">
             </div>
             <div class="content">
-                <h1>Welcome to Math Courses</h1>
-                <p>Your introductory text goes here.</p>
-                <p>More information in normal text size.</p>
+                <h1>Welcome to MATHLETES</h1>
+                <p>What we know is a drop</p>
+                <p>What we don't know is an ocean</p>
             </div>
         </div>
         <div class="course-container">
                         <!-- Course 1 -->
                         <div class="course">
-                            <h2>CHAPTER 1: MATRIX </h2>
-                            <p>Learn the fundamentals of algebra.</p>
-                            <img src="algebra-image.jpg" alt="Algebra">
+                            <h2>CHAPTER 1: Matrices and Detereminants </h2>
+                            <p>quote</p>
+                            <img src="algebra-image.jpg" alt="Matrices">
                             <button class="button" onclick="openRandomWebsite()">Learn More</button>
                         </div>
                 
                         <!-- Course 2 -->
                         <div class="course">
-                            <h2>CHAPTER 2: Geometry</h2>
-                            <p>Explore the world of geometric shapes and theorems.</p>
-                            <img src="geometry-image.jpg" alt="Geometry">
+                            <h2>CHAPTER 2:Vector</h2>
+                            <p>quote</p>
+                            <img src="geometry-image.jpg" alt="Vector">
                             <button class="button" onclick="openRandomWebsite()">Learn More</button>
                         </div>
                 
                         <!-- Course 3 -->
                         <div class="course">
-                            <h2>CHAPTER 3: Calculus</h2>
-                            <p>Dive into the realm of calculus and derivatives.</p>
-                            <img src="calculus-image.jpg" alt="Calculus">
+                            <h2>CHAPTER 3:Straight Line</h2>
+                            <p>quote</p>
+                            <img src="calculus-image.jpg" alt="Straight Line">
                             <button class="button" onclick="openRandomWebsite()">Learn More</button>
                         </div>
                          <!-- Course 4 -->
                          <div class="course">
-                            <h2>CHAPTER 4: Calculus</h2>
-                            <p>Dive into the realm of calculus and derivatives.</p>
-                            <img src="calculus-image.jpg" alt="Calculus">
+                            <h2>CHAPTER 4:The Circle</h2>
+                            <p>Quote</p>
+                            <img src="calculus-image.jpg" alt="The Circle">
                             <button class="button" onclick="openRandomWebsite()">Learn More</button>
                         </div>
                     </div>
@@ -247,8 +269,8 @@
 </script>
 
 <script>
-   function toggleDetails(section) {
-        const details = document.getElementById(${section}-details);
+    function toggleDetails(section) {
+        const details = document.getElementById(`${section}-details`);
         details.style.display = details.style.display === 'none' ? 'block' : 'none';
     }
     function toggleDialog(dialogId) {
@@ -262,5 +284,4 @@
         }
 </script>
 </body>
-</html>
- 
+</html>     
